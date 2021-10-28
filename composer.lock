@@ -1,0 +1,219 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "93f5b45352f747be739ba5c8c103830a",
+    "packages": [
+        {
+            "name": "iqomp/formatter",
+            "version": "2.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/iqomp/formatter.git",
+                "reference": "c6c0601f1fa49c38dd0f26138eb3a9c52998af76"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/iqomp/formatter/zipball/c6c0601f1fa49c38dd0f26138eb3a9c52998af76",
+                "reference": "c6c0601f1fa49c38dd0f26138eb3a9c52998af76",
+                "shasum": ""
+            },
+            "require-dev": {
+                "squizlabs/php_codesniffer": "3.*"
+            },
+            "type": "library",
+            "extra": {
+                "hyperf": {
+                    "config": "Iqomp\\Formatter\\ConfigProvider"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Iqomp\\Formatter\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Iqbal Fauzi",
+                    "email": "iqbalfawz@gmail.com"
+                }
+            ],
+            "description": "Object formatter and data filler",
+            "support": {
+                "issues": "https://github.com/iqomp/formatter/issues",
+                "source": "https://github.com/iqomp/formatter/tree/v2.2.0"
+            },
+            "time": "2021-07-15T06:25:08+00:00"
+        },
+        {
+            "name": "iqomp/model",
+            "version": "2.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/iqomp/model.git",
+                "reference": "985d5b21249c37a3194d781bc53b2fe770f8e336"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/iqomp/model/zipball/985d5b21249c37a3194d781bc53b2fe770f8e336",
+                "reference": "985d5b21249c37a3194d781bc53b2fe770f8e336",
+                "shasum": ""
+            },
+            "require-dev": {
+                "squizlabs/php_codesniffer": "^3.5"
+            },
+            "suggest": {
+                "hyperf/translation": "Allow model validator to be translated to id-ID or en-US",
+                "iqomp/formatter": "Object formatter for format type related to database",
+                "iqomp/validator": "Form validation for databases rule"
+            },
+            "type": "library",
+            "extra": {
+                "hyperf": {
+                    "config": "Iqomp\\Model\\ConfigProvider"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Iqomp\\Model\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Iqbal Fauzi",
+                    "email": "iqbalfawz@gmail.com"
+                }
+            ],
+            "description": "Generalization database model for standardize usage",
+            "support": {
+                "issues": "https://github.com/iqomp/model/issues",
+                "source": "https://github.com/iqomp/model/tree/v2.1.1"
+            },
+            "time": "2021-06-24T04:38:53+00:00"
+        },
+        {
+            "name": "iqomp/validator",
+            "version": "2.2.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/iqomp/validator.git",
+                "reference": "4df17e2739b474d12a5469ac1d3580da4f59eae5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/iqomp/validator/zipball/4df17e2739b474d12a5469ac1d3580da4f59eae5",
+                "reference": "4df17e2739b474d12a5469ac1d3580da4f59eae5",
+                "shasum": ""
+            },
+            "require-dev": {
+                "squizlabs/php_codesniffer": "^3.5"
+            },
+            "suggest": {
+                "hyperf/translation": "Allow enum to be translated to id-ID or en-US"
+            },
+            "type": "library",
+            "extra": {
+                "hyperf": {
+                    "config": "Iqomp\\Validator\\ConfigProvider"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Iqomp\\Validator\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Iqbal Fauzi",
+                    "email": "iqbalfawz@gmail.com"
+                }
+            ],
+            "description": "Simple and easy form/object validator",
+            "support": {
+                "issues": "https://github.com/iqomp/validator/issues",
+                "source": "https://github.com/iqomp/validator/tree/v2.2.1"
+            },
+            "time": "2021-07-19T07:25:49+00:00"
+        }
+    ],
+    "packages-dev": [
+        {
+            "name": "squizlabs/php_codesniffer",
+            "version": "3.6.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/squizlabs/PHP_CodeSniffer.git",
+                "reference": "f268ca40d54617c6e06757f83f699775c9b3ff2e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/squizlabs/PHP_CodeSniffer/zipball/f268ca40d54617c6e06757f83f699775c9b3ff2e",
+                "reference": "f268ca40d54617c6e06757f83f699775c9b3ff2e",
+                "shasum": ""
+            },
+            "require": {
+                "ext-simplexml": "*",
+                "ext-tokenizer": "*",
+                "ext-xmlwriter": "*",
+                "php": ">=5.4.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^4.0 || ^5.0 || ^6.0 || ^7.0"
+            },
+            "bin": [
+                "bin/phpcs",
+                "bin/phpcbf"
+            ],
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.x-dev"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Greg Sherwood",
+                    "role": "lead"
+                }
+            ],
+            "description": "PHP_CodeSniffer tokenizes PHP, JavaScript and CSS files and detects violations of a defined set of coding standards.",
+            "homepage": "https://github.com/squizlabs/PHP_CodeSniffer",
+            "keywords": [
+                "phpcs",
+                "standards"
+            ],
+            "support": {
+                "issues": "https://github.com/squizlabs/PHP_CodeSniffer/issues",
+                "source": "https://github.com/squizlabs/PHP_CodeSniffer",
+                "wiki": "https://github.com/squizlabs/PHP_CodeSniffer/wiki"
+            },
+            "time": "2021-10-11T04:00:11+00:00"
+        }
+    ],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": [],
+    "plugin-api-version": "2.0.0"
+}

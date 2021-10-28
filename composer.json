@@ -1,0 +1,29 @@
+{
+    "name": "iqomp/handler",
+    "description": "Data processor of a single model",
+    "type": "library",
+    "license": "MIT",
+    "version": "1.0.0",
+    "authors": [
+        {
+            "name": "Iqbal Fauzi",
+            "email": "iqbalfawz@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Iqomp\\Handler\\": "src/"
+        }
+    },
+    "require": {
+        "iqomp/formatter": "^2.2",
+        "iqomp/model": "^2.1",
+        "iqomp/validator": "^2.2"
+    },
+    "require-dev": {
+        "squizlabs/php_codesniffer": "^3.6"
+    },
+    "scripts": {
+        "lint": "./vendor/bin/phpcs --standard=PSR12 src"
+    }
+}
