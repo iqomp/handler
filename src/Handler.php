@@ -3,7 +3,7 @@
 /**
  * Data processor
  * @package iqomp/handler
- * @version 1.0.1
+ * @version 1.0.2
  */
 
 namespace Iqomp\Handler;
@@ -88,7 +88,7 @@ class Handler
                     'message' => $error
                 ];
 
-                return $result;
+                return null;
             }
 
             return $result;
