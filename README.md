@@ -66,6 +66,13 @@ class User extends \Iqomp\Handler\Handler
         'getConnection',
         'getModel'
     ];
+
+    // custom function after
+    protected function after_create(array $fields, $result)
+    {
+        // the function that will be called right after
+        // creating the object
+    }
 }
 ```
 
@@ -89,3 +96,12 @@ And using it from controller is now as easy as:
     // get paginations data
     $pager = $user->pagination();
 ```
+
+## Additional Methods
+
+### after_[method]
+
+If you create a method named `after_{method-name}` on the handler class, the method
+will be called right after method `{method-name}` get called successfully. The
+`after_{method}` will be called with argument forwarded from main method with the
+last arguments is added from result of calling `{method-name}` function.

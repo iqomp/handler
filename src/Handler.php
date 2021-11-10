@@ -3,7 +3,7 @@
 /**
  * Data processor
  * @package iqomp/handler
- * @version 1.0.2
+ * @version 1.1.0
  */
 
 namespace Iqomp\Handler;
@@ -96,6 +96,14 @@ class Handler
 
         if ($name == 'create') {
             $result = $model::getOne(['id' => $result]);
+        }
+
+        // call after_[create,createMany,set,remove]
+        $after_method = 'after_' . $name;
+        if (method_exists($this, $after_method)) {
+            $after_args = $arguments;
+            $after_args[] = $result;
+            call_user_func_array([$this, $after_method], $after_args);
         }
 
         $format = null;
