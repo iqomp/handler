@@ -3,7 +3,7 @@
 /**
  * Data processor
  * @package iqomp/handler
- * @version 1.1.0
+ * @version 1.1.1
  */
 
 namespace Iqomp\Handler;
@@ -78,6 +78,12 @@ class Handler
 
         $model = $this->model;
 
+        // call before_[method]
+        $before_method = 'before_' . $name;
+        if (method_exists($this, $before_method)) {
+            $arguments = $this->$before_method($arguments);
+        }
+
         // forward it to model
         $result = call_user_func_array([$model, $name], $arguments);
         if (!$result) {
@@ -98,7 +104,7 @@ class Handler
             $result = $model::getOne(['id' => $result]);
         }
 
-        // call after_[create,createMany,set,remove]
+        // call after_[method]
         $after_method = 'after_' . $name;
         if (method_exists($this, $after_method)) {
             $after_args = $arguments;
@@ -150,9 +156,9 @@ class Handler
         $total = $model::count($cond);
 
         return [
-            $this->pager_rpp   => $rpp,
-            $this->pager_page  => $page,
-            $this->pager_total => $total
+            $this->pager_rpp   => (int)$rpp,
+            $this->pager_page  => (int)$page,
+            $this->pager_total => (int)$total
         ];
     }
 }
